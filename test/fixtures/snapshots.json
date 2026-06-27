@@ -1,0 +1,36 @@
+{
+  "secularLiberal": {
+    "top5": [
+      "NLD",
+      "GBR",
+      "NZL",
+      "CAN",
+      "DEU"
+    ],
+    "bottom5": [
+      "PAK",
+      "EGY",
+      "LBY",
+      "JOR",
+      "MMR"
+    ],
+    "topMatch": 77
+  },
+  "devoutTraditional": {
+    "top5": [
+      "MMR",
+      "EGY",
+      "JOR",
+      "BGD",
+      "LBY"
+    ],
+    "bottom5": [
+      "AND",
+      "DEU",
+      "GBR",
+      "NZL",
+      "NLD"
+    ],
+    "topMatch": 81
+  }
+}

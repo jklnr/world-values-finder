@@ -1,0 +1,19 @@
+node_modules/
+dist/
+scripts/.cache/
+*.log
+.DS_Store
+
+# Generated World Values Survey content — not redistributed in this repo.
+# Regenerate locally (see README "First-time setup"):
+#   npm run data                              -> src/data/wvs.json
+#   node scripts/build-codebook-fixture.mjs   -> test/fixtures/codebook.json
+src/data/wvs.json
+src/data/question-order.json
+test/fixtures/codebook.json
+
+# Local env / tooling
+.env
+.env.*
+.vite/
+coverage/

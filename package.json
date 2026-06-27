@@ -1,0 +1,19 @@
+{
+  "name": "wvs-values-matcher",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Answer a sample of World Values Survey questions and see which countries best align with your values.",
+  "scripts": {
+    "data": "node scripts/build-data.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "analyze:questions": "node scripts/rank-questions.mjs",
+    "analyze:reachability": "node scripts/reachability.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
