@@ -27,15 +27,15 @@ into `values.js`, so no separate data file or network request is needed at runti
 
 ## Data
 
-Country values are real national averages computed from the **World Values
-Survey Wave 7 (2017-2022)** cross-national microdata (66 countries). The build
-script `scripts/build-data.mjs` downloads the official dataset from its OSF
+Country values are averages computes from the **World Values
+Survey Wave 7 (2017-2022)** cross-national microdata (66 countries).
+
+The build script `scripts/build-data.mjs` downloads the official dataset from its OSF
 mirror (`https://osf.io/36dgb/download`, ~180MB, no registration needed), drops
 missing codes, averages each sampled question by country, and normalizes the
 result into `src/data/wvs.json`.
 
-WVS-derived content is **not committed** to this repo. The following are
-git-ignored and must be generated locally (see First-time setup):
+The following are git-ignored and must be generated locally (see First-time setup):
 
 - `src/data/wvs.json` — aggregated country values (bundled into the app).
 - `test/fixtures/codebook.json` — WVS-7 codebook extract used by the tests
@@ -140,29 +140,13 @@ npx vite preview          # then open the printed URL at /values.html
 python3 -m http.server -d dist
 ```
 
-## Project layout
-
-```
-values.html              Vite HTML entry (-> dist/values.html)
-src/main.js              App state + screen orchestration
-src/ui.js                DOM helpers, screens, animated leaderboard
-src/survey.js            Sampled WVS questions (prompts + answer options)
-src/match.js             Normalization + MSE country ranking
-src/style.css            Styling (-> dist/values.css)
-src/data/wvs.json        Generated, bundled country data
-src/analysis/metrics.js        Pluggable scoring metrics (mseMetric)
-src/analysis/question-info.js  Question-predictiveness engine
-scripts/build-data.mjs         Data pipeline
-scripts/rank-questions.mjs     Question predictiveness analysis
-vite.config.js                 Forces the three output filenames
-```
-
 ## Attribution
 
 Haerpfer, C., Inglehart, R., Moreno, A., Welzel, C., Kizilova, K.,
 Diez-Medrano, J., Lagos, M., Norris, P., Ponarin, E. & Puranen, B. (eds.).
-*World Values Survey: Round Seven – Country-Pooled Datafile.* Madrid, Spain &
-Vienna, Austria: JD Systems Institute & WVSA Secretariat.
+2022. *World Values Survey: Round Seven - Country-Pooled Datafile Version 5.0.*
+Madrid, Spain & Vienna, Austria: JD Systems Institute & WVSA Secretariat.
+doi:10.14281/18241.20.
 
 This project is an independent, educational visualization and is not affiliated
 with or endorsed by the World Values Survey Association.
