@@ -1,4 +1,4 @@
-# Values Atlas
+# World Values Finder
 
 A single-page web app where you answer a sample of questions from the
 [World Values Survey](https://www.worldvaluessurvey.org/) and, as you progress,
